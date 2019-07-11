@@ -1,0 +1,18 @@
+<h1>Heroes</h1>
+
+
+<div class="row" *ngIf="heroes.length==0">
+  <div class="col-md-12">
+    <div class="alert alert-danger">
+      <h1 class="text-center text-danger">Sin resultados para {{termino}}</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-columns">
+  <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
+</div>
+
+
+<!-- <a [routerLink]="['/heroe','i']" routerLinkActive="router-link-active"  class="btn btn-outline-primary">Ver mas link</a> -->
